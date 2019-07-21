@@ -6,10 +6,8 @@ defmodule Cards do
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
     # for element in collection, do XYZ
-    for value <- values do
-      for suit <- suits do
-        "#{value} of #{suit}"
-      end
+    for suit <- suits, value <- values do
+      "#{value} of #{suit}"
     end
   end
 
